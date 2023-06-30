@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 
 function App() {
-
+const db = "http://localhost:8000/contents"
 const [items, setItems] = useState([])
 const [hasMore, sethasMore] = useState(true);
 
@@ -13,7 +13,7 @@ useEffect(()=>{
   const getContents = async ()=>{
    
     const res = await fetch(
-      `http://localhost:8000/contents?page=1&limit=5`
+      `${db}?page=1&limit=5`
     );
     const data = await res.json()
     
@@ -25,7 +25,7 @@ getContents()
 const getContentsfetch = async ()=>{
    
   const res = await fetch(
-    `http://localhost:8000/contents?page=${page}&limit=5`
+    `${db}?page=${page}&limit=5`
   );
   const data = await res.json()
   
@@ -70,7 +70,7 @@ setpage(page+1)
          <div className='flex' key={item.id}>
           
           <div className='display-card' >
-              {/* <div>id:{item.serial}</div> */}
+              
               <h3>{item.title}</h3>
               <p><i>{item.desc}</i></p>
               <div className='flex' >
