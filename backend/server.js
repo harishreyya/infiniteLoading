@@ -2,8 +2,10 @@ const express = require("express");
 const mongoose = require("mongoose")
 const cors = require("cors")
 
+const db_connect = "mongodb+srv://hari:hari@cluster0.hsmpfuf.mongodb.net/loading?retryWrites=true&w=majority"
+//const db_connect =  "mongodb://localhost:27017/loading"
 const connect = () => {
-    return mongoose.connect("mongodb://localhost:27017/loading",{
+    return mongoose.connect(db_connect,{
         // useCreateIndex:true,
         // useFindAndModify:false,
         useNewUrlParser:true,
