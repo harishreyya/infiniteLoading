@@ -38,7 +38,7 @@ List and provide a brief overview of the technologies used in the project.
   JavaScript library to make HTTP requests or fetching data
 - `react-router-dom`<br/>
   implementation of dynamic routing 
--`react-infinite-scroll-component`<br/>
+- `react-infinite-scroll-component`<br/>
   for implementation of infinite loading
 #### Cloud Deployment
 
